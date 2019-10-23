@@ -29,13 +29,13 @@ namespace CapaDatos
 
                         Producto prod = new Producto();
                         prod.Id = dr.GetInt32(dr.GetOrdinal("Id"));//
-                        prod.Id = int.Parse(dr["Id"].ToString()); 
-                      //  prod.Id = (int)dr["Id"]; // Dará error, porque se considera un Int32
+                        prod.Id = int.Parse(dr["Id"].ToString());
+                        //  prod.Id = (int)dr["Id"]; // Dará error, porque se considera un Int32
                         prod.Descripcion = dr["Descripcion"].ToString();
 
                         prod.Precio = (double)dr["Precio"];
                         prod.Stock = dr.GetInt32(dr.GetOrdinal("Stock")); // Así da error prod.Stock = (int)dr["Stock"]; debería ponerConvert.ToInt32((long)dr["Stock"]);               
-                        lista.Add(prod);           
+                        lista.Add(prod);
                     }
                 }
             }
@@ -73,6 +73,33 @@ namespace CapaDatos
             }
             return mens;
         }
+
+        public string AñadirProducto(Producto prod)
+        {
+            string mens = "";
+            try
+            {
+                using (SQLiteConnection con = new SQLiteConnection(cadConexion))
+                {
+
+                    string sql = "Insert INTO Productos (Id, Descripcion, Precio, Stock) Values (@id, @descripcion, @precio, @stock)";
+                    SQLiteCommand cmd = new SQLiteCommand(sql, con);
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@id", prod.Id);
+                    cmd.Parameters.AddWithValue("@descripcion", prod.Descripcion);
+                    cmd.Parameters.AddWithValue("@precio", prod.Precio);
+                    cmd.Parameters.AddWithValue("@stock", prod.Stock);
+                    int nf = cmd.ExecuteNonQuery();
+                    if (nf == 0) mens = "No ha grabado, aunque sin error de ejecución";
+                }
+            }
+            catch (Exception exc)
+            {
+                mens = exc.Message;
+            }
+            return mens;
+        }
+
         public string AñadirPedido(Pedido ped)
         {
             string mens = "";

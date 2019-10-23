@@ -42,6 +42,15 @@
             this.btnAñadirPedido = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.btnProductos = new System.Windows.Forms.Button();
+            this.btnAñadirProducto = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtIdProducto = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,11 +178,94 @@
             this.btnProductos.UseVisualStyleBackColor = true;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
+            // btnAñadirProducto
+            // 
+            this.btnAñadirProducto.Location = new System.Drawing.Point(735, 353);
+            this.btnAñadirProducto.Name = "btnAñadirProducto";
+            this.btnAñadirProducto.Size = new System.Drawing.Size(141, 43);
+            this.btnAñadirProducto.TabIndex = 28;
+            this.btnAñadirProducto.Text = "Añadir producto";
+            this.btnAñadirProducto.UseVisualStyleBackColor = true;
+            this.btnAñadirProducto.Click += new System.EventHandler(this.btnAñadirProducto_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(687, 194);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Id Producto";
+            // 
+            // txtIdProducto
+            // 
+            this.txtIdProducto.Location = new System.Drawing.Point(772, 187);
+            this.txtIdProducto.Name = "txtIdProducto";
+            this.txtIdProducto.Size = new System.Drawing.Size(79, 20);
+            this.txtIdProducto.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(686, 235);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Descripcion";
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(772, 232);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(226, 20);
+            this.txtDescripcion.TabIndex = 32;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(687, 277);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Precio";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(696, 317);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Stock";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(772, 270);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(79, 20);
+            this.txtPrecio.TabIndex = 35;
+            // 
+            // txtStock
+            // 
+            this.txtStock.Location = new System.Drawing.Point(772, 314);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.Size = new System.Drawing.Size(79, 20);
+            this.txtStock.TabIndex = 36;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1027, 450);
+            this.Controls.Add(this.txtStock);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtIdProducto);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnAñadirProducto);
             this.Controls.Add(this.txtNombreEmpleado);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtIdEmpleado);
@@ -213,6 +305,15 @@
         private System.Windows.Forms.Button btnAñadirPedido;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnAñadirProducto;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtIdProducto;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtStock;
     }
 }
 

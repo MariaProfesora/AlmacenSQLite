@@ -70,5 +70,14 @@ namespace CapaPresentacion
             else
                 MessageBox.Show(mens);
         }
+
+        private void btnAñadirProducto_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtIdProducto.Text);
+            string descripcion = txtDescripcion.Text;
+            Producto prod = new Producto(id, descripcion, double.Parse(txtPrecio.Text), int.Parse(txtStock.Text));
+            string mens = Program.misDatos.AñadirProducto(prod);
+            if (mens!="") MessageBox.Show(mens);
+        }
     }
 }
